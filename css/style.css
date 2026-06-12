@@ -4,28 +4,28 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  /* Warna utama: navy gelap + gold */
-  --bg:        #0d1117;
-  --bg-2:      #161b22;
-  --bg-3:      #1c2330;
-  --gold:      #c9a84c;
-  --gold-lt:   #e8c97a;
-  --gold-dim:  rgba(201,168,76,0.12);
-  --white:     #f0f4ff;
-  --gray:      #8b98a9;
-  --gray-lt:   #c5cdd8;
-  --border:    rgba(201,168,76,0.18);
+  /* Warna utama: deep crimson red + dark */
+  --bg:        #0e0708;
+  --bg-2:      #160b0c;
+  --bg-3:      #1e1012;
+  --gold:      #e03040;
+  --gold-lt:   #ff6070;
+  --gold-dim:  rgba(224,48,64,0.12);
+  --white:     #f8f0f0;
+  --gray:      #a08888;
+  --gray-lt:   #d4c4c4;
+  --border:    rgba(224,48,64,0.2);
 
   /* Tag colors */
-  --web-clr:  #3b8beb;
-  --lang-clr: #48bb78;
-  --db-clr:   #ed8936;
-  --net-clr:  #9f7aea;
-  --tool-clr: #4fd1c5;
+  --web-clr:  #60a5fa;
+  --lang-clr: #4ade80;
+  --db-clr:   #fb923c;
+  --net-clr:  #c084fc;
+  --tool-clr: #2dd4bf;
 
   --radius:   14px;
   --radius-sm:8px;
-  --shadow:   0 8px 32px rgba(0,0,0,0.4);
+  --shadow:   0 8px 32px rgba(0,0,0,0.5);
   --trans:    0.3s ease;
 
   font-size: 16px;
@@ -74,7 +74,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sec-line {
   width: 3rem;
   height: 3px;
-  background: linear-gradient(90deg, var(--gold), transparent);
+  background: linear-gradient(90deg, #e03040, transparent);
   border-radius: 2px;
   margin: 0 auto;
 }
@@ -93,13 +93,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: var(--trans);
 }
 .btn-primary {
-  background: linear-gradient(135deg, var(--gold), #a07830);
-  color: #0d1117;
+  background: linear-gradient(135deg, #e03040, #a01020);
+  color: #fff;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--gold-lt), var(--gold));
+  background: linear-gradient(135deg, #ff6070, #e03040);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(201,168,76,.4);
+  box-shadow: 0 6px 20px rgba(224,48,64,.5);
 }
 .btn-ghost {
   border: 1.5px solid var(--gold);
@@ -209,12 +209,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .blob-1 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, var(--gold), transparent 70%);
+  background: radial-gradient(circle, #e03040, transparent 70%);
   top: -100px; right: -100px;
 }
 .blob-2 {
   width: 400px; height: 400px;
-  background: radial-gradient(circle, #3b5bdb, transparent 70%);
+  background: radial-gradient(circle, #7f1d1d, transparent 70%);
   bottom: -80px; left: -80px;
 }
 
@@ -281,9 +281,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .avatar-ring {
   width: 280px; height: 280px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold) 0%, #3b5bdb 100%);
+  background: linear-gradient(135deg, #e03040 0%, #7f1d1d 100%);
   padding: 4px;
-  box-shadow: 0 0 60px rgba(201,168,76,.25);
+  box-shadow: 0 0 60px rgba(224,48,64,.35);
 }
 .avatar-ring > * {
   width: 100%; height: 100%;
@@ -319,6 +319,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .chip-go  { bottom: 20px; left: -30px; animation-delay: 0s; }
 .chip-net { top: 30px; right: -30px; animation-delay: 1.5s; }
+.chip-py  { top: 50%; left: -40px; transform: translateY(-50%); animation-delay: 0.75s; }
+.chip-sql { bottom: 60px; right: -35px; animation-delay: 2.25s; }
 @keyframes floatY {
   0%,100% { transform: translateY(0); }
   50%      { transform: translateY(-8px); }
@@ -444,7 +446,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .bar-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, var(--gold), var(--gold-lt));
+  background: linear-gradient(90deg, #e03040, #ff6070);
   border-radius: 10px;
   transition: width 1.2s cubic-bezier(.4,0,.2,1);
 }
@@ -476,8 +478,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .t-tool { color: var(--tool-clr); border-color: rgba(79,209,197,.3);  background: rgba(79,209,197,.08); }
 .t-new  { animation: pulse 2s ease infinite; }
 @keyframes pulse {
-  0%,100% { box-shadow: 0 0 0 0 rgba(72,187,120,.4); }
-  50%      { box-shadow: 0 0 0 6px rgba(72,187,120,0); }
+  0%,100% { box-shadow: 0 0 0 0 rgba(74,222,128,.4); }
+  50%      { box-shadow: 0 0 0 6px rgba(74,222,128,0); }
 }
 .tags-note { font-size: .75rem; color: var(--gray); }
 
