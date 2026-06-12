@@ -48,4 +48,4 @@ Portofolio2/
 ## Kontak yang Sudah Diisi
 - Email: hafidzrakha17@gmail.com
 - Instagram: @hafidzrakha157
-- GitHub: perlu diisi sendiri
+- GitHub: Rakha69
